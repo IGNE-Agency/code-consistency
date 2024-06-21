@@ -32,5 +32,6 @@
       "optional": true
     }
   },
-  "license": "See licence file at: https://github.com/IGNE-Agency/code-consistency"
+  "license": "See licence file at: https://github.com/IGNE-Agency/code-consistency",
+  "gitHead": "4351cf886df46c9e8d226cde49337d878e405f48"
 }

@@ -4,7 +4,9 @@
   "description": "Provides configs and docs to promote and enforce code consistency between projects.",
   "author": "Igne Agency",
   "private": "true",
-  "scripts": {},
+  "scripts": {
+    "publish": "lerna publish --no-private"
+  },
   "workspaces": [
     "packages/*"
   ],
