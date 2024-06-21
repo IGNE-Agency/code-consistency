@@ -1,0 +1,17 @@
+{
+  "name": "@igne-agency/prettier",
+  "version": "0.1.0",
+  "description": "Prettier config for Igne projects.",
+  "author": "Igne Agency",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/IGNE-Agency/code-consistency.git"
+  },
+  "homepage": "https://github.com/IGNE-Agency/code-consistency#readme",
+  "bugs": {
+    "url": "https://github.com/IGNE-Agency/code-consistency/issues"
+  },
+  "main": "index.json",
+  "scripts": {},
+  "license": "See licence file at: https://github.com/IGNE-Agency/code-consistency"
+}

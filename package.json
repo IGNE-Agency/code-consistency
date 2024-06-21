@@ -1,0 +1,14 @@
+{
+  "name": "code-consistency",
+  "version": "0.1.0",
+  "description": "Provides configs and docs to promote and enforce code consistency between projects.",
+  "author": "Igne Agency",
+  "private": "true",
+  "scripts": {},
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "lerna": "^8.1.3"
+  }
+}
