@@ -1,6 +1,6 @@
 {
   "name": "@igne-agency/eslint-config-igne",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Eslint configs for Igne projects.",
   "author": "Igne Agency",
   "repository": {
