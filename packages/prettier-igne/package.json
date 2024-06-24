@@ -1,6 +1,6 @@
 {
   "name": "@igne-agency/prettier",
-  "version": "0.1.1",
+  "version": "1.0.0",
   "description": "Prettier config for Igne projects.",
   "author": "Igne Agency",
   "repository": {
@@ -13,6 +13,5 @@
   },
   "main": "index.json",
   "scripts": {},
-  "license": "See licence file at: https://github.com/IGNE-Agency/code-consistency",
-  "gitHead": "4351cf886df46c9e8d226cde49337d878e405f48"
+  "license": "See licence file at: https://github.com/IGNE-Agency/code-consistency"
 }

@@ -1,6 +1,6 @@
 {
   "name": "code-consistency",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Provides configs and docs to promote and enforce code consistency between projects.",
   "author": "Igne Agency",
   "private": "true",
