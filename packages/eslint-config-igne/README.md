@@ -5,7 +5,7 @@ Currently contains config that can be used for SPA projects, made with Vite or C
 ## Setting up
 
 ```
-npm install eslint-config-jorn-ts
+npm install @igne-agency/eslint-config-igne
 ```
 
 Add `.eslintrc.cjs` to your project root:
