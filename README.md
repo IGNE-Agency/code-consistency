@@ -2,6 +2,9 @@
 
 Provides configs and docs to promote and enforce code consistency between projects
 
+- [eslint config](./packages/eslint-config-igne)
+- [prettier config](./packages/prettier-igne)
+
 ## Publishing
 
 Before you can publish, you:
