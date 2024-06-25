@@ -2,6 +2,37 @@
 
 Currently contains config that can be used for SPA projects, made with Vite or CRA.
 
+## Setting up
+
+```
+npm install eslint-config-jorn-ts
+```
+
+Add `.eslintrc.cjs` to your project root:
+
+```js
+module.exports = {
+  root: true,
+  extends: 'eslint-config-jorn-ts',
+}
+```
+
+Add a script in `package.json` to lint:
+
+```json
+"scripts": {
+  "lint": "eslint ./src"
+}
+```
+
+This will lint everything in the `./src` folder. If you need to lint more, you can adjust accordingly. It is also possible to exclude folders by adding an `.eslintignore` file in the root. It has the same syntax as `.gitignore`.
+
+## Editor integration
+
+I recommend you setup your editor in a way that is comfortable to you to get early warning about eslint errors.
+
+(will add instructions here...)
+
 ## TODO
 
 - Test the current TS implementation (overrides) in a Vite TS project
