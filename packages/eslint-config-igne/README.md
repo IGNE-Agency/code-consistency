@@ -54,6 +54,8 @@ You can disable it in your (workspace) settings with:
 "javascript.validate.enable": false,
 ```
 
+> Just make sure you don't commit your workspace settings!
+
 ## TODO
 
 - Test the current TS implementation (overrides) in a Vite TS project
