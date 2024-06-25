@@ -46,7 +46,7 @@ If not listed here? [File a new one!](https://github.com/IGNE-Agency/code-consis
 ### Double error
 
 If you get double errors (eslint and ts), this is because of VS Codes built-in linter.  
-[!double error](../../docs/assets/double-error.png)
+[!double error](https://raw.githubusercontent.com/IGNE-Agency/code-consistency/readme-update/docs/assets/double-error.png)
 
 You can disable it in your (workspace) settings with:
 
