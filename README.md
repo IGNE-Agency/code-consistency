@@ -17,7 +17,12 @@ Before you can publish, you:
 - On your computer go to the root of this repo and make sure your changes are committed.
 - Now run `npx lerna publish` to publish the changed packages. You'll have to choose what kind of version bump to give. Make sure to follow the [guidelines on semantic versioning](https://semver.org/).
 
-# TODO
+## TODO
 
 - Integrate lerna in a github workflow so it automatically gets published on merge with main.
   - Ideally it should be coupled with something like [semantic-release](https://semantic-release.gitbook.io) so version bumping is automatic. However I think semantic-release doesn't work with monorepo's...
+
+## Contributing
+
+You need to either be a part of the [IGNE Agency organization](https://github.com/IGNE-Agency) or fork and make a pull request.  
+For organization members, note: the main branch is protected, so you need to make a pull request.
