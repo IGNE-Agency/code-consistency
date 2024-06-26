@@ -10,6 +10,30 @@ Provides configs and docs to promote and enforce code consistency between projec
 You need to either be a part of the [IGNE Agency organization](https://github.com/IGNE-Agency), or fork and make a pull request.  
 For organization members, note: the main branch is protected, so you need to make a pull request.
 
+### Commit messages
+
+We use conventional-commits with the [angular preset](https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-angular/README.md). Please write proper commit messages; they will be used to auto-generate the changelog.
+
+One of the following scopes are mandatory:
+
+- `repo` for non-package stuff
+- `eslint` for the eslint-config-igne package
+- `prettier` for
+
+Examples:
+
+```sh
+git commit -m"feat(repo): added conventional commits config"
+
+git commit -m"docs(prettier): explain vscode setup"
+
+git commit -m"feat(eslint): add rule X
+BREAKING CHANGE: this may cause errors in consuming packages"
+```
+
+If you made changes to both the main repo and a package, create separate commits.  
+More info: [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+
 ### Publishing
 
 Before you can publish, you:
