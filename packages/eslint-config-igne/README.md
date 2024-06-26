@@ -60,7 +60,6 @@ You can disable it in your (workspace) settings with:
 
 - Test the current TS implementation (overrides) in a Vite TS project
 - `eslint-plugin-simple-import-sort`
-- Put rules in separate files, one per plugin/feature, so they can be included per stack config file
 - Make stack specific exports: Expo, NextJS, (and typescript for each as well)
 
 Investigate:
