@@ -7,7 +7,7 @@
       "conventionalCommits": true
     },
     "publish": {
-      "message": "chore(release): publish"
+      "message": "build(repo): publish"
     }
   }
 }
