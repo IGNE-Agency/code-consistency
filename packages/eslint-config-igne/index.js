@@ -1,3 +1,7 @@
+const rulesGeneric = require('./rules/generic')
+const rulesReact = require('./rules/react')
+const rulesImport = require('./rules/import')
+
 module.exports = {
   env: {
     browser: true,
@@ -16,19 +20,6 @@ module.exports = {
     ecmaVersion: 'latest',
     sourceType: 'module',
   },
-  overrides: [
-    {
-      files: ['**/*.ts?(x)'],
-      parser: '@typescript-eslint/parser',
-      parserOptions: {
-        sourceType: 'module',
-        ecmaFeatures: {
-          jsx: true,
-        },
-        warnOnUnsupportedTypeScriptVersion: true,
-      },
-    },
-  ],
   settings: {
     react: {
       version: 'detect',
@@ -46,15 +37,23 @@ module.exports = {
     },
   },
 
+  overrides: [
+    {
+      files: ['**/*.ts?(x)'],
+      parser: '@typescript-eslint/parser',
+      parserOptions: {
+        sourceType: 'module',
+        ecmaFeatures: {
+          jsx: true,
+        },
+        warnOnUnsupportedTypeScriptVersion: true,
+      },
+    },
+  ],
+
   rules: {
-    // Allow console- and debugger statements in development, but throw warnings in production build
-    // `console.warn` and `console.error` are always allowed
-    'no-console':
-      process.env.NODE_ENV === 'production' ? ['warn', { allow: ['warn', 'error'] }] : 'off',
-    'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-
-    'react/jsx-no-target-blank': 'off',
-
-    'import/no-anonymous-default-export': 'warn',
+    ...rulesGeneric,
+    ...rulesReact,
+    ...rulesImport,
   },
 }
