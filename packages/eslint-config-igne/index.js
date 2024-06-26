@@ -1,5 +1,6 @@
 const rulesGeneric = require('./rules/generic')
 const rulesReact = require('./rules/react')
+const rulesImportSort = require('./rules/importSort')
 const rulesImport = require('./rules/import')
 
 module.exports = {
@@ -14,7 +15,7 @@ module.exports = {
     'plugin:react-hooks/recommended',
     'prettier',
   ],
-  plugins: ['react', 'react-hooks', 'import', 'prettier'],
+  plugins: ['react', 'react-hooks', 'simple-import-sort', 'import', 'prettier'],
   ignorePatterns: ['dist', '.eslintrc.cjs'],
   parserOptions: {
     ecmaVersion: 'latest',
@@ -54,6 +55,7 @@ module.exports = {
   rules: {
     ...rulesGeneric,
     ...rulesReact,
+    ...rulesImportSort,
     ...rulesImport,
   },
 }
