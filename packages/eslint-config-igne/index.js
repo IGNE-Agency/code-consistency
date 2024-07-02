@@ -1,7 +1,7 @@
-const rulesGeneric = require('./rules/generic')
-const rulesReact = require('./rules/react')
-const rulesImportSort = require('./rules/importSort')
-const rulesImport = require('./rules/import')
+const rulesGeneric = require("./rules/generic");
+const rulesReact = require("./rules/react");
+const rulesImportSort = require("./rules/importSort");
+const rulesImport = require("./rules/import");
 
 module.exports = {
   env: {
@@ -9,30 +9,30 @@ module.exports = {
     es2020: true, // Can be different per project
   },
   extends: [
-    'eslint:recommended',
-    'plugin:react/recommended',
-    'plugin:react/jsx-runtime',
-    'plugin:react-hooks/recommended',
-    'prettier',
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:react/jsx-runtime",
+    "plugin:react-hooks/recommended",
+    "prettier",
   ],
-  plugins: ['react', 'react-hooks', 'simple-import-sort', 'import', 'prettier'],
-  ignorePatterns: ['dist', '.eslintrc.cjs'],
+  plugins: ["react", "react-hooks", "simple-import-sort", "import", "prettier"],
+  ignorePatterns: ["dist", ".eslintrc.cjs"],
   parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
+    ecmaVersion: "latest",
+    sourceType: "module",
   },
   settings: {
     react: {
-      version: 'detect',
+      version: "detect",
     },
-    'import/parsers': {
-      [require.resolve('@typescript-eslint/parser')]: ['.ts', '.mts', '.cts', '.tsx', '.d.ts'],
+    "import/parsers": {
+      [require.resolve("@typescript-eslint/parser")]: [".ts", ".mts", ".cts", ".tsx", ".d.ts"],
     },
-    'import/resolver': {
-      [require.resolve('eslint-import-resolver-node')]: {
-        extensions: ['.js', '.jsx', '.ts', '.tsx'],
+    "import/resolver": {
+      [require.resolve("eslint-import-resolver-node")]: {
+        extensions: [".js", ".jsx", ".ts", ".tsx"],
       },
-      [require.resolve('eslint-import-resolver-typescript')]: {
+      [require.resolve("eslint-import-resolver-typescript")]: {
         alwaysTryTypes: true,
       },
     },
@@ -41,10 +41,10 @@ module.exports = {
   overrides: [
     { files: ["**/*.js?(x)"] },
     {
-      files: ['**/*.ts?(x)'],
-      parser: '@typescript-eslint/parser',
+      files: ["**/*.ts?(x)"],
+      parser: "@typescript-eslint/parser",
       parserOptions: {
-        sourceType: 'module',
+        sourceType: "module",
         ecmaFeatures: {
           jsx: true,
         },
@@ -59,4 +59,4 @@ module.exports = {
     ...rulesImportSort,
     ...rulesImport,
   },
-}
+};
