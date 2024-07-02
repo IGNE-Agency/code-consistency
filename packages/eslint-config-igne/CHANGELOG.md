@@ -3,6 +3,12 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [1.4.1](https://github.com/IGNE-Agency/code-consistency/compare/@igne-agency/eslint-config-igne@1.4.0...@igne-agency/eslint-config-igne@1.4.1) (2024-07-02)
+
+### Bug Fixes
+
+- **eslint:** ignore package related files ([71550dc](https://github.com/IGNE-Agency/code-consistency/commit/71550dcb19fa7f1cea2cd4f87bde619c6097461f))
+
 # [1.4.0](https://github.com/IGNE-Agency/code-consistency/compare/@igne-agency/eslint-config-igne@1.0.0...@igne-agency/eslint-config-igne@1.4.0) (2024-07-02)
 
 ### Bug Fixes
