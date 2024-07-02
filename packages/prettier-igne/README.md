@@ -7,7 +7,7 @@ Shared config for prettier, so all our projects look nice and recognizable.
 Once for a project.
 
 ```
-npm install @igne-agency/prettier
+npm i -D @igne-agency/prettier prettier
 ```
 
 Add prettier to `package.json`:
