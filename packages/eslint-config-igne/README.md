@@ -7,7 +7,7 @@ Currently contains config that can be used for SPA projects, made with Vite or C
 Once for a project.
 
 ```
-npm install @igne-agency/eslint-config-igne
+npm i -D eslint@8 @igne-agency/eslint-config-igne
 ```
 
 Add `.eslintrc.cjs` to your project root:
