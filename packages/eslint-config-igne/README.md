@@ -15,8 +15,8 @@ Add `.eslintrc.cjs` to your project root:
 ```js
 module.exports = {
   root: true,
-  extends: 'eslint-config-jorn-ts',
-}
+  extends: "eslint-config-jorn-ts",
+};
 ```
 
 Add a script in `package.json` to lint:
@@ -35,9 +35,19 @@ Make sure to add a step to the pipeline of your project that runs this script.
 
 For every developer.
 
+### VSCode
+
 - Install the eslint extension: `dbaeumer.vscode-eslint`
 - Sometimes it is necessary to reload the editor:  
   Show all commands (cmd+shift+P on mac) -> `Developer: reload window`
+- Some things can be auto-fixed by eslint. On mac press: `[option]+[l]`
+  - Alternatively, you can configre VSCode to autofix on save:
+  - Open VSCode's `settings.json` and add:
+    ```json
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": "explicit"
+    },
+    ```
 
 ## Common issues
 
@@ -46,11 +56,11 @@ If not listed here? [File a new one!](https://github.com/IGNE-Agency/code-consis
 ### Double error
 
 If you get double errors (eslint and ts), this is because of VS Codes built-in linter.  
-![double error](https://raw.githubusercontent.com/IGNE-Agency/code-consistency/readme-update/docs/assets/double-error.png)
+![double error](../../docs/assets/double-error.png)
 
 You can disable it in your (workspace) settings with:
 
-```
+```json
 "javascript.validate.enable": false,
 ```
 
