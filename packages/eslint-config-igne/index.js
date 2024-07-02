@@ -16,7 +16,7 @@ module.exports = {
     "prettier",
   ],
   plugins: ["react", "react-hooks", "simple-import-sort", "import", "prettier"],
-  ignorePatterns: ["dist", ".eslintrc.cjs"],
+  ignorePatterns: ["dist", ".eslintrc.cjs", "package.json", "*-lock.json"],
   parserOptions: {
     ecmaVersion: "latest",
     sourceType: "module",
