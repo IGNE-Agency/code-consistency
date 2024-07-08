@@ -3,6 +3,20 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/IGNE-Agency/code-consistency/compare/@igne-agency/eslint-config-igne@1.0.0...@igne-agency/eslint-config-igne@1.5.0) (2024-07-08)
+
+### Bug Fixes
+
+- also lint jsx files ([b7f6582](https://github.com/IGNE-Agency/code-consistency/commit/b7f658209b76189b8ce84c4dddce9f14c436d005))
+- **eslint:** ignore package related files ([7181f2f](https://github.com/IGNE-Agency/code-consistency/commit/7181f2f63a04862be1cc012cb686947205dfb428))
+- import rules were not properly exported ([86647b5](https://github.com/IGNE-Agency/code-consistency/commit/86647b5ae22f013036549ae02aabeeb2b48f797b))
+
+### Features
+
+- **eslint:** add expo config ([2e32a22](https://github.com/IGNE-Agency/code-consistency/commit/2e32a22e3f0a1e1bc7abd3c503d567562258a5b9))
+- **eslint:** added import sorting ([a76f81b](https://github.com/IGNE-Agency/code-consistency/commit/a76f81b12f16d5a1712557a6958f5a0905d45e80))
+- **eslint:** moved rules to separate files ([9ac0ae3](https://github.com/IGNE-Agency/code-consistency/commit/9ac0ae304b5c59f6ed5279632f6f8cd8333d8eaa))
+
 ## [1.4.1](https://github.com/IGNE-Agency/code-consistency/compare/@igne-agency/eslint-config-igne@1.4.0...@igne-agency/eslint-config-igne@1.4.1) (2024-07-02)
 
 ### Bug Fixes
