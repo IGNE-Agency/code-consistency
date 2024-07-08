@@ -3,9 +3,6 @@
   "version": "independent",
   "ignoreChanges": ["**/*.test.*", "**/*.md"],
   "command": {
-    "version": {
-      "conventionalCommits": true
-    },
     "publish": {
       "message": "build(repo): publish"
     }
