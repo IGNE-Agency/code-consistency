@@ -12,9 +12,6 @@
     "url": "https://github.com/IGNE-Agency/code-consistency/issues"
   },
   "main": "index.js",
-  "files": [
-    "./expo.js"
-  ],
   "scripts": {},
   "dependencies": {
     "@typescript-eslint/parser": "^5.4.2 || ^6.0.0 || 7.0.0 - 7.2.0",
