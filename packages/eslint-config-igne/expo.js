@@ -1,6 +1,9 @@
 module.exports = {
   extends: ["./index.js"],
   plugins: ["expo"],
+  env: {
+    node: true,
+  },
   ignorePatterns: [
     // JS files can end up in build intermediates, eg:
     // android/app/build/intermediates/assets/debug/EXDevMenuApp.android.js
