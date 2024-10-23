@@ -1,7 +1,10 @@
 # Change Log
 
-All notable changes to this project will be documented in this file.
-See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
+---
+
+All entries below this point are pre-[changesets](https://github.com/changesets/changesets)
+
+---
 
 # [1.5.0](https://github.com/IGNE-Agency/code-consistency/compare/@igne-agency/eslint-config-igne@1.0.0...@igne-agency/eslint-config-igne@1.5.0) (2024-07-08)
 
