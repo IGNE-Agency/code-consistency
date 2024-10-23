@@ -1,6 +1,6 @@
 # Code Consistency
 
-Provides configs and docs to promote and enforce code consistency between projects
+Monorepo that provides configs and docs to promote and enforce code consistency between projects.
 
 - [eslint config](./packages/eslint-config-igne)
 - [prettier config](./packages/prettier-igne)
@@ -10,42 +10,69 @@ Provides configs and docs to promote and enforce code consistency between projec
 You need to either be a part of the [IGNE Agency organization](https://github.com/IGNE-Agency), or fork and make a pull request.  
 For organization members, note: the main branch is protected, so you need to make a pull request.
 
-### Commit messages
+This monorepo uses [changesets](https://github.com/changesets/changesets) to help with versioning the packages and automate the release process.  
+[Read a short intro here](https://github.com/changesets/changesets/blob/main/docs/intro-to-using-changesets.md)
 
-We use conventional-commits with the [angular preset](https://github.com/conventional-changelog/commitlint/blob/master/%40commitlint/config-angular/README.md). Please write proper commit messages; they will be used to auto-generate the changelog.
+### How to make changes
 
-One of the following scopes are mandatory:
+- Create a pull request for your changes.
+- If your change should update the version of a package, run `npx changeset add`.
+- Choose the version increment (major, minor, patch - read below when to use what).
+- Describe your change (edit the generated file if you need to).
+- Commit the changeset markdown file.
 
-- `repo` for non-package stuff
-- `eslint` for the eslint-config-igne package
-- `prettier` for
+Note that the changeset will end up in the changelog file of the related package!
+
+### Choose version increment
+
+> [adding a chagneset docs](https://github.com/changesets/changesets/blob/main/docs/adding-a-changeset.md#i-am-in-a-multi-package-repository-a-mono-repo)
+
+When running `npx changeset add` you will choose what kind of change it is. It should warn the consumer that there's a certain impact when updating.
 
 Examples:
 
-```sh
-git commit -m"feat(repo): added conventional commits config"
+#### Major changes
 
-git commit -m"docs(prettier): explain vscode setup"
+> When you make incompatible API changes.
 
-git commit -m"feat(eslint): add rule X
-BREAKING CHANGE: this may cause errors in consuming packages"
-```
+- Any breaking change for consumers of the package.
+- Adding/changing an eslint rule that can not be auto-fixed.
+- Deprecation of a node version.
 
-If you made changes to both the main repo and a package, create separate commits.  
-More info: [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/)
+#### Minor changes
 
-### Publishing
+> When you add functionality in a backward compatible manner.
 
-Before you can publish, you:
+- Adding features/rules that can be auto-fixed.
+- Removing eslint rules.
 
-- Need to be part of the @Igne-agency npm organization
-- Log in to npm
-  - Either from the CLI: `npm login`
-  - OR create a granular access token in npm and add it to `~/.npmrc` manually  
-    `//registry.npmjs.org/:_authToken=<token>`
-- On your computer go to the root of this repo and make sure your changes are committed.
-- Now run `npx lerna publish` to publish the changed packages. You'll have to choose what kind of version bump to give. Make sure to follow the [guidelines on semantic versioning](https://semver.org/).
+#### Patch changes
 
-## TODO
+> When you make backward compatible bug fixes/updates.
 
-- Automate publishing using github workflow on merge with main.
+- Fixing bugs.
+- Updating dependencies of a package.
+- Impactful changes to documentation. This will likely only happen together with feature change.
+
+#### No changeset needed
+
+- Any change to non-package files (the main repo or build system).
+- Update to documentation other than the main README's of packages.
+
+### Versioning & publishing
+
+> ⚠️ Always discuss with a senior code owner.
+
+Every time a PR gets merged to `main`, a github action will trigger. If the action discovers changeset files (in the `.changeset` folder), it will create a PR called "Ready for release". This PR will be updated when more merges occur.
+
+At some point a code owner will decide that it is time for a release and merge the "Ready for release" PR. This will publish the affected packages to npm with the relevant new version. For instance, two patches and one minor release will increment the version of the package on npm with 0.1.0.
+
+#### Manual versioning & publishing
+
+Versioning is done with `npx changeset version`. This will update some files. Make sure to merge this to `main` before you publish.
+
+Doing a manual release using the changesets cli requires an [npm token](https://docs.npmjs.com/creating-and-viewing-access-tokens) with access to the IGNE organization on npm.
+
+Add this token to your shell config (.bashrc/.zshrc): `export NPM_TOKEN_SCOPE_IGNE=npm_XXXXXXX`. This way the `npx changeset publish` command will be able to publish the package to npm.
+
+Alternatively you can publish using `npm publish` using a granular access token. But this is not recommended.
