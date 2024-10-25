@@ -54,6 +54,7 @@ module.exports = {
         React: true,
         JSX: true,
       },
+      extends: ["plugin:@typescript-eslint/recommended"],
     },
   ],
 
