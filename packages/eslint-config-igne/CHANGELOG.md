@@ -1,5 +1,15 @@
 # Change Log
 
+## 1.6.0
+
+### Minor Changes
+
+- e42ebf5: Added `react` and `JSX` globals so eslint doesn't complain about typescript references. Fixes #11.
+
+  If you added these globals yourself in your config, you can remove them.
+
+- 2ed5f67: Added typescript-eslint plugin, so consumers don't need to add it themselves anymore. Fixes #12.
+
 ---
 
 All entries below this point are pre-[changesets](https://github.com/changesets/changesets)
