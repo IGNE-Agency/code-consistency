@@ -50,6 +50,10 @@ module.exports = {
         },
         warnOnUnsupportedTypeScriptVersion: true,
       },
+      globals: {
+        React: true,
+        JSX: true,
+      },
     },
   ],
 
