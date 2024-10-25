@@ -11,6 +11,9 @@
   "bugs": {
     "url": "https://github.com/IGNE-Agency/code-consistency/issues"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "main": "index.js",
   "scripts": {},
   "dependencies": {
