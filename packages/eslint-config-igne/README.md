@@ -15,7 +15,7 @@ Add `.eslintrc.cjs` to your project root:
 ```js
 module.exports = {
   root: true,
-  extends: "eslint-config-jorn-ts",
+  extends: "eslint-config-igne",
 };
 ```
 
