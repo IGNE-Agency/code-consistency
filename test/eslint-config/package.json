@@ -1,0 +1,24 @@
+{
+  "name": "eslint-config",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "lint": "eslint",
+    "inspect-lint-config": "eslint --inspect-config"
+  },
+  "dependencies": {
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@igne-agency/eslint-config-igne": "file:../../packages/eslint-config-igne",
+    "@types/react": "18.3.10",
+    "@types/react-dom": "18.3.0",
+    "@vitejs/plugin-react": "4.3.2",
+    "eslint": "9.11.1",
+    "typescript": "5.5.3",
+    "vite": "5.4.8"
+  }
+}
