@@ -1,12 +1,14 @@
 {
   "name": "code-consistency",
   "version": "1.0.0",
+  "type": "module",
   "description": "Provides configs and docs to promote and enforce code consistency between projects.",
   "author": "Igne Agency",
   "private": "true",
   "scripts": {
     "bump": "changeset version",
-    "release": "changeset publish"
+    "release": "changeset publish",
+    "lint": "eslint"
   },
   "workspaces": [
     "packages/*"
@@ -14,6 +16,9 @@
   "prettier": "./packages/prettier-igne",
   "devDependencies": {
     "@changesets/cli": "2.27.9",
+    "@igne-agency/eslint-config-igne": "workspace:*",
+    "eslint": "9.13.0",
+    "globals": "15.11.0",
     "prettier": "3.3.3"
   }
 }
