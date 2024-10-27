@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.0
+
+Implements eslint flat config with eslint 9.
+
+**BREAKING CHANGES**: see [the release candidate docs below](#2.0.0-rc.0).
+
 ## 2.0.0-rc.0
 
 ### Major Changes
