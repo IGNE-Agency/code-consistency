@@ -1,5 +1,11 @@
 # Change Log
 
+## 2.0.1
+
+### Patch Changes
+
+- 546e2b1: Fixed package name in main readme
+
 ## 2.0.0
 
 Implements eslint flat config with eslint 9.
