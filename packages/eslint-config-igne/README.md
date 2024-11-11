@@ -1,13 +1,13 @@
-# My preferred eslint settings for personal projects
+# Eslint config for IGNE agency
 
-Currently contains config that can be used for SPA projects, made with Vite or CRA.
+Contains configs that can be used for react projects. Tested with Vite, NextJS and Expo.
 
 ## Setting up
 
 > Once for a project.
 
 ```
-npm i -D eslint @igne-agency/eslint-config
+npm i -D eslint @igne-agency/eslint-config-igne
 ```
 
 Make sure that your project has `type: "module"` in `package.json`.  
@@ -16,7 +16,7 @@ Also tsconfig file name(s) should be `tsconfig.json` or `tsconfig.*.json` for im
 Add `eslint.config.js` to your project root:
 
 ```js
-import { eslintConfigDefault } from "@igne-agency/eslint-config";
+import { eslintConfigDefault } from "@igne-agency/eslint-config-igne";
 
 const config = [...eslintConfigDefault];
 export default config;
@@ -34,7 +34,7 @@ This will lint all js/ts files in your project.
 It is possible to exclude files or folders by adding an object with the `ignores` property before `eslintConfigDefault`.
 
 ```js
-import { eslintConfigDefault } from "@igne-agency/eslint-config";
+import { eslintConfigDefault } from "@igne-agency/eslint-config-igne";
 
 const config = [
   { ignores: ["eslint.config.js", "test/**"] },

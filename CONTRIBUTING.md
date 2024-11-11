@@ -26,14 +26,15 @@ Examples:
 > When you make incompatible API changes.
 
 - Any breaking change for consumers of the package.
-- Adding/changing an eslint rule that can not be auto-fixed.
+- Adding/changing an eslint rule with error level (will break the build), that can not be auto-fixed.
 - Deprecation of a node version.
 
 ### Minor changes
 
 > When you add functionality in a backward compatible manner.
 
-- Adding features/rules that can be auto-fixed.
+- Adding eslint rule with warning level (will not break the build).
+- Adding eslint rule with any level that can be auto fixed (eg. import order).
 - Removing eslint rules.
 
 ### Patch changes
